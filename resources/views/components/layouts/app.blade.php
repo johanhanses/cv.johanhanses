@@ -21,9 +21,9 @@
 
 <body class="font-poppins min-h-screen h-full">
     <div class="flex flex-col lg:flex-row lg:min-h-screen">
-        <x-nav class="w-full lg:w-1/4"/>
+        <x-layouts.nav class="w-full lg:w-1/4"/>
 
-        <main class="w-full lg:w-3/4 pt-12 px-6 lg:px-12 text-base md:text-lg">
+        <main class="w-full lg:w-3/4 pt-12 px-6 lg:px-12 text-sm lg:text-base md:text-lg">
             {{ $slot }}
         </main>
     </div>
