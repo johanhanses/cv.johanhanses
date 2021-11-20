@@ -9,13 +9,13 @@
         @endauth
 
         <button @click="show = ! show" class="lg:hidden">
-            <x-menu-icon />
-            <x-cross-icon />
+{{--            <x-menu-icon />--}}
+{{--            <x-cross-icon />--}}
         </button>
     </div>
 
     {{--mobile menu--}}
-{{--    @include("partials._mobile-menu")--}}
+    @include("partials._mobile-menu")
 
     <nav class="hidden lg:block">
         <ul class="uppercase text-xl space-y-6 text-right">
