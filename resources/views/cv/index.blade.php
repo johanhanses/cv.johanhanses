@@ -100,7 +100,6 @@
             <hr/>
 
             <div class="mt-2 mb-8 space-y-1">
-{{--                @dd($skill)--}}
                 <p><strong>Programming: </strong>{{ $skill->programming }}</p>
                 <p><strong>Frontend: </strong>{{ $skill->frontend }}</p>
                 <p><strong>Backend: </strong>{{ $skill->backend }}</p>
