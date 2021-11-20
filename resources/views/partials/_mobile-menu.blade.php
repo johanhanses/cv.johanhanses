@@ -2,7 +2,7 @@
     x-cloak
     x-show="show"
     x-transition
-    class="lg:hidden absolute left-0 top-16 right-0 bg-gray-900 px-6"
+    class="absolute left-0 top-16 right-0 bg-gray-900 px-6"
 >
     <ul class="uppercase text-lg lg:text-xl space-y-6 lg:text-right py-4">
         <li>

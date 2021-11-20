@@ -2,8 +2,7 @@
     x-data="{ show: false }"
     {{ $attributes(["class" => "bg-gray-900 text-gray-100 lg:pt-12 flex flex-col lg:items-end px-6 lg:px-12 relative"]) }}
 >
-    <div
-        class="uppercase text-2xl lg:text-3xl lg:mb-24 lg:text-right flex justify-between items-center w-full lg:block h-16 lg:h-auto"
+    <div class="uppercase text-2xl lg:text-3xl lg:mb-24 lg:text-right flex justify-between items-center w-full lg:block h-16 lg:h-auto"
     >
         @auth
             <p>Hello {{ auth()->user()->name }}!</p>
