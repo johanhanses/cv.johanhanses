@@ -100,15 +100,15 @@
             <hr/>
 
             <div class="mt-2 mb-8 space-y-1">
-                <p><strong>Programming: </strong><%= @skills["programming"] %>
-                </p>
-                <p><strong>Frontend: </strong><%= @skills["frontend"] %></p>
-                <p><strong>Backend: </strong><%= @skills["backend"] %></p>
-                <p><strong>Databases: </strong><%= @skills["db"] %></p>
-                <p><strong>Tooling: </strong><%= @skills["tools"] %></p>
-                <p><strong>Testing: </strong><%= @skills["test"] %></p>
-                <p><strong>Server: </strong><%= @skills["server"] %></p>
-                <p><strong>Other: </strong><%= @skills["other"] %></p>
+{{--                @dd($skill)--}}
+                <p><strong>Programming: </strong>{{ $skill->programming }}</p>
+                <p><strong>Frontend: </strong>{{ $skill->frontend }}</p>
+                <p><strong>Backend: </strong>{{ $skill->backend }}</p>
+                <p><strong>Databases: </strong>{{ $skill->db }}</p>
+                <p><strong>Tooling: </strong>{{ $skill->tools }}</p>
+                <p><strong>Testing: </strong>{{ $skill->test }}</p>
+                <p><strong>Server: </strong>{{ $skill->server }}</p>
+                <p><strong>Other: </strong>{{ $skill->other }}</p>
             </div>
         </div>
 
@@ -173,7 +173,7 @@
                         </tr>
                     </table>
                 </div>
-            </div>
-        @endforeach
+                @endforeach
+        </div>
     </section>
 </x-layouts.app>

@@ -14,7 +14,7 @@ class CvController extends Controller
     {
         return view("cv.index", [
             "header" => Header::first(),
-            "skill" => Skill::all(),
+            "skill" => Skill::first(),
             "works" => Work::all(),
             "educations" => Education::all()
         ]);

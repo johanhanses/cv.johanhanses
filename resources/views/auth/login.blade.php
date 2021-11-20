@@ -2,23 +2,36 @@
     <div class="lg:w-1/3 mx-auto mt-12">
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <!-- Email Address -->
+            <!-- Name -->
             <div>
-                <x-label for="email" class="sr-only"/>
+                <x-label for="name" class="sr-only"/>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" placeholder="Email"
-                         name="email" value="{{ old('email') }}" required autofocus/>
+                <x-input
+                    id="name"
+                    class="block mt-1 w-full"
+                    type="text"
+                    placeholder="Username"
+                    name="name"
+                    value="{{ old('name') }}"
+                    required
+                    autofocus
+                    autocomplete="name"
+                />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" class="sr-only"/>
 
-                <x-input id="password" class="block mt-1 w-full"
-                         type="password"
-                         name="password"
-                         placeholder="Password"
-                         required autocomplete="current-password"/>
+                <x-input
+                    id="password"
+                    class="block mt-1 w-full"
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    required
+                    autocomplete="current-password"
+                />
             </div>
 
             <!-- Remember Me -->
