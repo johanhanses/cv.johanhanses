@@ -9,7 +9,7 @@
             <p>Hello {{ auth()->user()->name }}!</p>
         @endauth
 
-        <button @click="show = ! show">
+        <button @click="show = ! show" class="lg:hidden">
             <x-menu-icon />
             <x-cross-icon />
         </button>
