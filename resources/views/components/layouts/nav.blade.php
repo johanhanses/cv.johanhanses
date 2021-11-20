@@ -8,14 +8,14 @@
             <p>Hello {{ auth()->user()->name }}!</p>
         @endauth
 
-        <button @click="show = ! show" class="lg:hidden">
+{{--        <button @click="show = ! show" class="lg:hidden">--}}
 {{--            <x-menu-icon />--}}
 {{--            <x-cross-icon />--}}
-        </button>
+{{--        </button>--}}
     </div>
 
     {{--mobile menu--}}
-    @include("partials._mobile-menu")
+{{--    @include("partials._mobile-menu")--}}
 
     <nav class="hidden lg:block">
         <ul class="uppercase text-xl space-y-6 text-right">
@@ -25,8 +25,10 @@
 
             @auth
                 <li>
-                    <a href="/coverletter" class="hover:underline {{ request()->is('coverletter') ? 'underline' : '' }}">Cover
-                        letter</a>
+                    <a href="/coverletter" class="hover:underline {{ request()->is('coverletter') ? 'underline' : '' }}"
+                    >
+                        Cover letter
+                    </a>
                 </li>
 
                 <li>
@@ -55,10 +57,12 @@
     </address>
 
     @auth
-        <nav class="text-sm text-right hidden lg:block">
+        <nav
+            x-data="{}"
+            class="text-sm text-right hidden lg:block"
+        >
             <a
                 href="/logout"
-                x-data="{}"
                 @click.prevent="document.querySelector('#logout-form').submit()"
                 class="uppercase hover:underline block mt-24"
             >
