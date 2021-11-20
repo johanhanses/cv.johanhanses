@@ -15,7 +15,7 @@
     </div>
 
     {{--mobile menu--}}
-{{--    @include("partials._mobile-menu")--}}
+    @include("partials._mobile-menu")
 
     <nav class="hidden lg:block">
         <ul class="uppercase text-xl space-y-6 text-right">
