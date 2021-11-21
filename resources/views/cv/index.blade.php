@@ -3,55 +3,45 @@
         <div>
             <h1 class="text-xl pb-2">Johan Hanses</h1>
 
-            <hr/>
+            <hr />
 
             <div class="flex flex-col md:flex-row md:justify-between mt-2 mb-8">
                 <div class="w-full md:w-4/6 space-y-1">
                     @auth
-                    <div class="flex justify-between">
-                        <p class="md:w-2/6">Address:</p>
-                        <p class="md:w-4/6 pl-4">{{ $header->address }}</p>
-                    </div>
+                        <div class="flex justify-between">
+                            <p class="md:w-2/6">Address:</p>
+                            <p class="md:w-4/6 pl-4">{{ $header->address }}</p>
+                        </div>
 
-                    <div class="flex justify-between">
-                        <p class="md:w-2/6">Mobile number:</p>
-                        <p class="md:w-4/6 pl-4">
-                            <a
-                                href="tel:{{ $header->phone }}"
-                                class="text-dark hover:underline text-blue-700"
-                            >
-                                {{ $header->phone }}
-                            </a>
-                        </p>
-                    </div>
+                        <div class="flex justify-between">
+                            <p class="md:w-2/6">Mobile number:</p>
+                            <p class="md:w-4/6 pl-4">
+                                <a href="tel:{{ $header->phone }}" class="text-dark hover:underline text-blue-700">
+                                    {{ $header->phone }}
+                                </a>
+                            </p>
+                        </div>
                     @endauth
                     <div class="flex justify-between">
                         <p class="md:w-2/6">Email:</p>
                         <p class="md:w-4/6 pl-4">
-                            <a
-                                href="mailto:{{ $header->email }}"
-                                class="text-dark hover:underline text-blue-700"
-                            >
+                            <a href="mailto:{{ $header->email }}" class="text-dark hover:underline text-blue-700">
                                 {{ $header->email }}
                             </a>
                         </p>
                     </div>
                     @auth
-                    <div class="flex justify-between">
-                        <p class="md:w-2/6">Date of birth:</p>
-                        <p class="md:w-4/6 pl-4">
-                            {{ \Carbon\Carbon::parse($header->date_of_birth)->format("Y-m-d") }}
-                        </p>
-                    </div>
+                        <div class="flex justify-between">
+                            <p class="md:w-2/6">Date of birth:</p>
+                            <p class="md:w-4/6 pl-4">
+                                {{ \Carbon\Carbon::parse($header->date_of_birth)->format("Y-m-d") }}
+                            </p>
+                        </div>
                     @endauth
                     <div class="flex justify-between">
                         <p class="md:w-2/6">Github:</p>
                         <p class="md:w-4/6 pl-4">
-                            <a
-                                target="_blank"
-                                href="{{ $header->github }}"
-                                class="text-dark hover:underline text-blue-700"
-                            >
+                            <a target="_blank" href="{{ $header->github }}" class="text-dark hover:underline text-blue-700">
                                 {{ str_replace("https://", "", $header->github) }}
                             </a>
                         </p>
@@ -60,11 +50,7 @@
                     <div class="flex justify-between">
                         <p class="md:w-2/6">LinkedIn:</p>
                         <p class="md:w-4/6 pl-4">
-                            <a
-                                target="_blank"
-                                href="{{ $header->linkedin }}"
-                                class="text-dark hover:underline break-all text-blue-700"
-                            >
+                            <a target="_blank" href="{{ $header->linkedin }}" class="text-dark hover:underline break-all text-blue-700">
                                 {{ str_replace("https://www.", "", $header->linkedin) }}
                             </a>
                         </p>
@@ -86,18 +72,14 @@
                 </div>
 
                 <div class="order-first md:order-last mb-6 md:mb-0 w-full md:w-auto">
-                    <img
-                        src="{{ asset("images/jag.png") }}"
-                        alt="me"
-                        class="h-auto w-auto mx-auto"
-                    >
+                    <img src="{{ asset("images/jag.png") }}" alt="me" class="h-auto w-auto mx-auto">
                 </div>
             </div>
         </div>
 
         <div>
             <h2 class="text-lg pb-2">Skills</h2>
-            <hr/>
+            <hr />
 
             <div class="mt-2 mb-8 space-y-1">
                 <p><strong>Programming: </strong>{{ $skill->programming }}</p>
@@ -114,7 +96,7 @@
         <div class="work">
             <h2 class="text-lg pb-2">Work experience</h2>
 
-            <hr/>
+            <hr />
 
             @foreach($works as $work)
                 <div class="mt-3 mb-8">
@@ -145,7 +127,7 @@
         <div>
             <h2 class="text-lg pb-2">Education</h2>
 
-            <hr/>
+            <hr />
 
             @foreach($educations as $education)
                 <div class="mt-3 mb-8">
@@ -172,7 +154,7 @@
                         </tr>
                     </table>
                 </div>
-                @endforeach
+            @endforeach
         </div>
     </section>
 </x-layouts.app>
