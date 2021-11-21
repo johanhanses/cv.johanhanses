@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="lg:w-1/3 mx-auto mt-12">
-        <form method="POST" action="{{ route('login') }}">
+        <form method="POST" action="{{ route('login') }}" data-turbo="false">
             @csrf
             <!-- Name -->
             <div>
