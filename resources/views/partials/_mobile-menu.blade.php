@@ -5,11 +5,13 @@
     class="absolute left-0 top-16 right-0 bg-gray-900 px-6"
 >
     <ul class="uppercase text-lg lg:text-xl space-y-6 lg:text-right py-4">
-        <li>
-            <a href="/" class="{{ request()->is('/') ? 'underline' : '' }}">CV</a>
-        </li>
-
         @auth
+            <li>
+                <a href="/" class="{{ request()->is('/') ? 'underline' : '' }}">
+                    CV
+                </a>
+            </li>
+
             <li>
                 <a href="/coverletter" class="{{ request()->is('coverletter') ? 'underline' : '' }}">
                     Cover letter

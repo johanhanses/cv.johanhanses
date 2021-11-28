@@ -7,7 +7,7 @@ use App\Http\Controllers\CoverLetterController;
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [CvController::class, "index"]);
+Route::get('/', [CvController::class, "index"])->middleware("auth");
 
 Route::get('/coverletter', [CoverLetterController::class, "index"])
     ->middleware("auth");

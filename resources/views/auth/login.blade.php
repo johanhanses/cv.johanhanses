@@ -2,7 +2,7 @@
     <div class="lg:w-1/3 mx-auto mt-12">
         <form method="POST" action="{{ route('login') }}" data-turbo="false">
             @csrf
-            <!-- Name -->
+
             <div>
                 <x-label for="name" class="sr-only"/>
 
@@ -19,7 +19,6 @@
                 />
             </div>
 
-            <!-- Password -->
             <div class="mt-4">
                 <x-label for="password" class="sr-only"/>
 
@@ -34,7 +33,6 @@
                 />
             </div>
 
-            <!-- Remember Me -->
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center">
                     <input
@@ -50,8 +48,10 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900"
-                       href="{{ route('password.request') }}">
+                    <a
+                        class="underline text-sm text-gray-600 hover:text-gray-900"
+                        href="{{ route('password.request') }}"
+                    >
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif

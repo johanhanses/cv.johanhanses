@@ -1,11 +1,11 @@
 <aside
     x-data="{ show: false }"
-    {{ $attributes(["class" => "bg-gray-900 text-gray-100 lg:pt-12 flex flex-col lg:items-end px-6 lg:px-12 relative"]) }}
+    {{ $attributes(["class" => "bg-gray-900 text-gray-100 flex flex-col lg:items-end px-6 lg:px-12 relative"]) }}
 >
     <div class="uppercase text-2xl lg:text-3xl lg:mb-24 lg:text-right flex justify-between items-center w-full lg:block h-16 lg:h-auto"
     >
         @auth
-            <p>Hello {{ auth()->user()->name }}!</p>
+            <p class="lg:mt-12">Hello {{ auth()->user()->name }}!</p>
         @endauth
 
         <button @click="show = ! show" class="lg:hidden">
@@ -15,15 +15,16 @@
     </div>
 
     {{--mobile menu--}}
-    @include("partials._mobile-menu")
+   @include("partials._mobile-menu")
+
 
     <nav class="hidden lg:block">
         <ul class="uppercase text-xl space-y-6 text-right">
-            <li>
-                <a href="/" class="hover:underline {{ request()->is('/') ? 'underline' : '' }}">CV</a>
-            </li>
-
             @auth
+                <li>
+                    <a href="/" class="hover:underline {{ request()->is('/') ? 'underline' : '' }}">CV</a>
+                </li>
+
                 <li>
                     <a href="/coverletter" class="hover:underline {{ request()->is('coverletter') ? 'underline' : '' }}"
                     >
@@ -59,12 +60,12 @@
     @auth
         <nav
             x-data="{}"
-            class="text-sm text-right hidden lg:block"
+            class="text-xl text-right hidden lg:block"
         >
             <a
                 href="/logout"
                 @click.prevent="document.querySelector('#logout-form').submit()"
-                class="uppercase hover:underline block mt-24"
+                class="uppercase hover:underline block mt-6"
             >
                 Log out
             </a>
@@ -75,10 +76,10 @@
             </form>
         </nav>
     @else
-        <nav class="text-sm text-right hidden lg:block">
+        <nav class="text-xl text-right hidden lg:block">
             <a
                 href="/login"
-                class="uppercase hover:underline block mt-24"
+                class="uppercase hover:underline block mt-6"
             >
                 Log in
             </a>
