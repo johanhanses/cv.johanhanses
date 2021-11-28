@@ -22,11 +22,17 @@
 
 <body class="font-poppins min-h-screen h-full">
     <div class="flex flex-col lg:flex-row lg:min-h-screen">
-        <x-layouts.nav class="w-full lg:w-1/4"/>
+        @auth
+            <x-layouts.nav class="w-full lg:w-1/4"/>
 
-        <main class="w-full lg:w-3/4 pt-12 px-6 lg:px-12 text-sm lg:text-base md:text-lg">
-            {{ $slot }}
-        </main>
+            <main class="w-full lg:w-3/4 pt-12 px-6 lg:px-12 text-sm lg:text-base md:text-lg">
+                {{ $slot }}
+            </main>
+        @else
+            <main class="w-full w-full pt-12 px-6 lg:px-12 text-sm lg:text-base md:text-lg">
+                {{ $slot }}
+            </main>
+        @endauth
     </div>
 </body>
 </html>

@@ -8,13 +8,13 @@
         @auth
             <li>
                 <a href="/" class="{{ request()->is('/') ? 'underline' : '' }}">
-                    CV
+                    Cover letter
                 </a>
             </li>
 
             <li>
-                <a href="/coverletter" class="{{ request()->is('coverletter') ? 'underline' : '' }}">
-                    Cover letter
+                <a href="/cv" class="{{ request()->is('cv') ? 'underline' : '' }}">
+                    CV
                 </a>
             </li>
 

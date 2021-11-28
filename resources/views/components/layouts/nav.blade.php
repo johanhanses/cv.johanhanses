@@ -22,18 +22,25 @@
         <ul class="uppercase text-xl space-y-6 text-right">
             @auth
                 <li>
-                    <a href="/" class="hover:underline {{ request()->is('/') ? 'underline' : '' }}">CV</a>
-                </li>
-
-                <li>
-                    <a href="/coverletter" class="hover:underline {{ request()->is('coverletter') ? 'underline' : '' }}"
+                    <a
+                        href="/" class="hover:underline {{ request()->is('/') ? 'underline' : '' }}"
                     >
                         Cover letter
                     </a>
                 </li>
 
                 <li>
-                    <a href="/about" class="hover:underline {{ request()->is('about') ? 'underline' : '' }}">About</a>
+                    <a
+                        href="/cv" class="hover:underline {{ request()->is('cv') ? 'underline' : '' }}"
+                    >
+                        CV
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/about" class="hover:underline {{ request()->is('about') ? 'underline' : '' }}">
+                        About
+                    </a>
                 </li>
             @endauth
         </ul>
